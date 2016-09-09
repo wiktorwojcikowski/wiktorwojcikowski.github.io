@@ -1,0 +1,31 @@
+<md-content layout-padding >
+  <md-input-container class="md-block" style="margin-bottom: 0px;" >
+    <label><ng-md-icon icon="search"></ng-md-icon> Search in table</label>
+    <input ng-model="q" ng-change="filter()">
+  </md-input-container>
+
+  <div style="color: #999; font-size: 95%; margin-top: -30px; position: relative; " >
+    Sort order:
+    <span ng-repeat="c in sortOrder">
+      <a ng-click="removeSort(c);" class="md-primary" style="cursor: pointer; text-decoration: none;" >{{c}} {{sortKeys[c] | uppercase}}</a><span ng-if="!$last" >, </span>
+    </span>
+    <span ng-show="!sortOrder.length" >no order</span>
+  </div>
+
+  <table class="data-table" >
+    <thead>
+      <tr>
+        <th ng-click="addSort('first')" class="md-{{sortKeys['first']}}" ng-class="{'md-current': sortKeys['first'] != undefined}" >First name <ng-md-icon icon="arrow_downward" class="md-sort-icon" ></ng-md-icon></th>
+        <th ng-click="addSort('last')" class="md-{{sortKeys['last']}}" ng-class="{'md-current': sortKeys['last'] != undefined}" >Last name <ng-md-icon icon="arrow_downward" class="md-sort-icon" ></ng-md-icon></th>
+        <th ng-click="addSort('age')" class="md-{{sortKeys['age']}}" ng-class="{'md-current': sortKeys['age'] != undefined}"" >Age <ng-md-icon icon="arrow_downward" class="md-sort-icon" ></ng-md-icon></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="entry in data" >
+        <td>{{entry.first}}</td>
+        <td>{{entry.last}}</td>
+        <td>{{entry.age}}</td>
+      </tr>
+    </tbody>
+  </table>
+</md-content>

@@ -1,0 +1,26 @@
+
+
+<md-list>
+  <md-subheader class="md-no-sticky">Item1</md-subheader>
+  <md-list-item class="md-2-line">
+    <ng-md-icon icon="explore"  ></ng-md-icon>
+    <div class="md-list-item-text" ng-class="md-offset">
+      <p>Current state</p>
+      <h3>{{$state.current.name}}</h3>
+    </div>
+  </md-list-item>
+  <md-list-item class="md-2-line">
+    <ng-md-icon icon="low_priority"  ></ng-md-icon>
+    <div class="md-list-item-text" ng-class="md-offset">
+      <p>Page slug</p>
+      <h3>{{$state.params.pageUrl[0]}}</h3>
+    </div>
+  </md-list-item>
+  <md-list-item class="md-2-line">
+    <ng-md-icon icon="low_priority" ></ng-md-icon>
+    <div class="md-list-item-text" ng-class="md-offset">
+      <p>Subpage slug</p>
+      <h3>{{$state.params.pageUrl[1]}}</h3>
+    </div>
+  </md-list-item>
+</md-list>

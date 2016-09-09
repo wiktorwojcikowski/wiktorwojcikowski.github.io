@@ -1,0 +1,25 @@
+{
+  "name": "angular-test",
+  "homepage": "https://github.com/wiktorwojcikowski/angular-test",
+  "authors": [
+    "Wiktor <wiktor.wojcikowski@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true,
+  "dependencies": {
+    "angular-ui-router": "^0.3.1",
+    "angular": "angularjs#^1.5.8",
+    "requirejs": "^2.3.1",
+    "angular-material": "^1.1.1",
+    "angular-material-icons": "^0.7.1"
+  }
+}

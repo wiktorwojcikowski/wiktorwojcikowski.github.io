@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>TestAngular</title>
+	<link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+	<link rel="stylesheet" href="bower_components/angular-material-icons/angular-material-icons.css">
+	<link rel="stylesheet" href="app.css">
+</head>
+<body ng-cloak>
+
+	<section layout="row" layout-fill ng-controller="MainController">
+
+	  <md-sidenav layout="column" class="md-sidenav-left md-primary md-whiteframe-z2 " 
+	      md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+	    <md-toolbar class="md-accent" >
+	        <h1 class="md-toolbar-tools">AngularTest</h1>
+	      </div>
+	    </md-toolbar>
+	    <md-list>
+	      <md-list-item ui-sref="dynamic-pages" ui-sref-active="active" >
+	        <md-item-content layout="row" layout-align="start center">
+	          <ng-md-icon icon="sync"></ng-md-icon>
+	          <div class="inset">Dynamic Pages</div>
+	        </md-item-content>
+	      </md-list-item>
+	      <md-list-item ui-sref="service-form" ui-sref-active="active" >
+	        <md-item-content layout="row" layout-align="start center">
+	          <ng-md-icon icon="mode_edit"></ng-md-icon>
+	          <div class="inset">Service Form</div>
+	        </md-item-content>
+	      </md-list-item>
+	      <md-list-item ui-sref="service-value" ui-sref-active="active" >
+	        <md-item-content layout="row" layout-align="start center">
+	          <ng-md-icon icon="list"></ng-md-icon>
+	          <div class="inset">Service Value</div>
+	        </md-item-content>
+	      </md-list-item>
+	      <md-list-item ui-sref="array" ui-sref-active="active" >
+	        <md-item-content layout="row" layout-align="start center">
+	          <ng-md-icon icon="list"></ng-md-icon>
+	          <div class="inset">Array</div>
+	        </md-item-content>
+	      </md-list-item>
+	      <md-list-item ui-sref="directives-examples" ui-sref-active="active" >
+	        <md-item-content layout="row" layout-align="start center">
+	          <ng-md-icon icon="toys"></ng-md-icon>
+	          <div class="inset">Directives examples</div>
+	        </md-item-content>
+	      </md-list-item>
+	      <md-list-item ui-sref="calculator" ui-sref-active="active" >
+	        <md-item-content layout="row" layout-align="start center">
+	          <ng-md-icon icon="functions"></ng-md-icon>
+	          <div class="inset">Calculator</div>
+	        </md-item-content>
+	      </md-list-item>
+	      <md-list-item ui-sref="serial" ui-sref-active="active" >
+	        <md-item-content layout="row" layout-align="start center">
+	          <ng-md-icon icon="power_input"></ng-md-icon>
+	          <div class="inset">Serial field</div>
+	        </md-item-content>
+	      </md-list-item>
+
+	    </md-list>
+	  </md-sidenav>
+
+	  <div layout="column" class="relative" layout-fill role="main">
+
+	    <md-toolbar >
+	      <div class="md-toolbar-tools">
+	        <md-button ng-click="toggleSidenav()" hide-gt-md aria-label="Menu">
+	          <ng-md-icon icon="menu"></ng-md-icon>
+	        </md-button>
+	        {{common.title}}
+	        <span flex></span>
+
+	      </div>
+	    </md-toolbar>
+	    
+	    <md-content md-scroll-y class="" >
+	      <ui-view layout-fill class="ui-view-container" ></ui-view>
+	    </md-content>
+	    
+	  </div>
+	</section>
+
+	<script data-main="require-config" src="bower_components/requirejs/require.js"></script>
+</body>
+</html>

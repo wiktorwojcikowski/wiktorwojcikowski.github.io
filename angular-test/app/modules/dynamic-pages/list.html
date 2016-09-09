@@ -1,0 +1,23 @@
+
+<md-list >
+  <md-subheader class="md-no-sticky">Pick a page:</md-subheader>
+  <md-divider></md-divider>
+  <md-list-item class="md-2-line" ng-repeat="page in dynamicPages" ui-sref="dynamic-pages.show({pageUrl: [page]})" ng-class="{active: page == $state.params.pageUrl[0]}" >
+    <div class="md-list-item-text" layout="column">
+      <h3>{{ page }}</h3>
+      <p>page #{{$index+1}}</p>
+    </div>
+  </md-list-item>
+  <md-divider></md-divider>
+</md-list>
+
+<div layout="row" layout-padding>
+  <md-content flex  >
+    <ui-view ></ui-view>
+  </md-content>
+
+  <md-divider ng-show="$state.params.pageUrl.length > 1" ></md-divider>
+  <md-content ng-show="$state.params.pageUrl.length > 1" flex layout-padding ui-view="aditional" ></md-content>
+
+
+</div>

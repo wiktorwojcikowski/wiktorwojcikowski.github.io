@@ -1,0 +1,27 @@
+<md-content layout-padding >
+
+  <form layout="row" >
+
+    <md-input-container flex >
+      <label>A</label>
+      <input ng-model="parts[0]" type="number" >
+    </md-input-container>
+
+    <md-input-container flex >
+      <label>B</label>
+      <input ng-model="parts[1]" type="number" >
+    </md-input-container>
+
+    <md-input-container flex >
+      <label>C</label>
+      <input ng-model="parts[2]" type="number" >
+    </md-input-container>
+
+    <md-input-container flex >
+      <label>SUM</label>
+      <input ng-model="sum" type="number" ng-change="split()" >
+    </md-input-container>
+
+  </form>
+
+</md-content>

@@ -1,0 +1,9 @@
+<h2>Vivamus sit amet justo dui.</h2>
+<p >
+  Vestibulum ut tellus ut ligula mollis fermentum. Aliquam bibendum ipsum et risus dictum, ut malesuada turpis malesuada. Donec tempor pharetra nunc in laoreet.
+</p>
+<md-list flex>
+  <md-list-item ui-sref="dynamic-pages.show({pageUrl: [$state.params.pageUrl[0], 'info'] })" ng-class="{active: 'info' == $state.params.pageUrl[1]}" ><div class="md-list-item-text">Page info</div></md-list-item>
+  <md-list-item ui-sref="dynamic-pages.show({pageUrl: [$state.params.pageUrl[0], 'service'] })" ng-class="{active: 'service' == $state.params.pageUrl[1]}" >Service value</md-list-item>
+  <md-list-item ui-sref="dynamic-pages.show({pageUrl: [$state.params.pageUrl[0], 'static'] })" ng-class="{active: 'static' == $state.params.pageUrl[1]}" >Static content</md-list-item>
+</md-list>

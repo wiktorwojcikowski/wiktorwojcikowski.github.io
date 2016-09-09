@@ -1,0 +1,93 @@
+md-list-item.active {
+  background: #eee;
+}
+
+
+/* start 'enter' transition */
+.ui-view-container.ng-enter {
+  display: block;
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+}
+
+/* end 'enter' transition */
+.ui-view-container.ng-enter-active {
+  opacity: 1;
+}
+
+
+
+table.data-table {
+  width: 100%;
+  border-spacing: 0;
+  overflow: hidden;
+}
+table.data-table thead > tr {
+  height: 56px;
+}
+table.data-table tbody > tr,
+table.data-table tfoot > tr {
+  height: 48px;
+}
+table.data-table th {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+  cursor: pointer;
+}
+table.data-table th:focus {
+  outline: none;
+  border: none;
+}
+table.data-table th md-icon {
+  height: 16px;
+  width: 16px;
+  font-size: 16px !important;
+  line-height: 16px !important;
+}
+table.data-table th .md-sort-icon {
+  color: rgba(0, 0, 0, 0.26);
+  opacity: 0;
+  transition: -webkit-transform 0.25s, opacity 0.25s;
+  transition: transform 0.25s, opacity 0.25s;
+}
+table.data-table th.md-asc .md-sort-icon {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+table.data-table th.md-desc .md-sort-icon {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+table.data-table th.md-current .md-sort-icon {
+  opacity: 1;
+}
+table.data-table th md-icon:not(:first-child) {
+  margin-left: 8px;
+}
+table.data-table th md-icon:not(:last-child) {
+  margin-right: 8px;
+}
+table.data-table td,
+table.data-table th {
+  vertical-align: middle;
+  text-align: left;
+}
+table.data-table td > *,
+table.data-table th > * {
+  vertical-align: middle;
+}
+table.data-table td:last-child,
+table.data-table th:last-child {
+  padding: 0 24px 0 0;
+}
+table.data-table td.md-numeric,
+table.data-table th.md-numeric {
+  text-align: right;
+}
+table.data-table td {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 13px;
+  border-top: 1px rgba(0, 0, 0, 0.12) solid;
+}
