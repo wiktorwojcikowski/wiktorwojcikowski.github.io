@@ -14,7 +14,7 @@ define([
         controller: 'FormController'
       })
       .state('service-value', {
-        url: 'service-value/',
+        url: '/service-value/',
         templateUrl: 'modules/service-example/value.html',
         controller: 'ValueController'
       })
