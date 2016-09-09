@@ -49,7 +49,7 @@ define([
         views : {
           "" : {
             templateUrl: function ($stateParams) {
-              return '/modules/dynamic-pages/views/' + $stateParams.pageUrl[0] + '.html';
+              return '/angular-test/app/modules/dynamic-pages/views/' + $stateParams.pageUrl[0] + '.html';
             },
             controllerProvider: ['controller', function (controller) {
               return controller;
@@ -58,7 +58,7 @@ define([
           "aditional": {
             templateUrl: function ($stateParams) {
               if ($stateParams.pageUrl.length > 1) {
-                return '/modules/dynamic-pages/views/' + $stateParams.pageUrl[0] + '-' + $stateParams.pageUrl[1] + '.html';
+                return '/angular-test/app/modules/dynamic-pages/views/' + $stateParams.pageUrl[0] + '-' + $stateParams.pageUrl[1] + '.html';
               } else {
                 return '';
               }
